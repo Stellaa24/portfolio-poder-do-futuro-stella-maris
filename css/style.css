@@ -1,0 +1,220 @@
+/* primeiras propriedades: Lembrando que o asterisco pega o site todo*/
+* {
+    /* define a área de margem nos quatro lados do elemento */
+    margin: 0;
+    /* distância entre o conteúdo de um elemento e suas bordas */
+    padding: 0;
+    /* para configurar uma ou mais das propriedades de contorno */
+    outline: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body{
+    /* Definindo a fonte de todo nosso body */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+  }
+  
+  li {
+    /* retirando as bolinhas das nossas listas */
+    list-style: none;
+  }
+  
+  .header-menu{
+    /* // Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens. */
+    display: flex;
+    font-weight: 800;
+    font-size: 5px;
+    position: fixed; /*Deixa o nosso header fixo*/
+    width: 100%; /*Largura*/
+    padding: 8px; /*Espaçamento dos 4 lados*/
+    padding-bottom: 32px; /*Espaçamento inferior*/
+    padding-top: 32px;/*Espaçamento superior*/
+    height: 60px; /*Altura*/
+    background-color: #724796; /*cor de fundo da nossa barra de navegação*/
+  }
+  
+  .header-menu nav {
+    display: flex; 
+    justify-content: flex-end; /*Colocando no lado direito da pagina*/
+    width: 100%; /*Largura*/
+  }
+  
+  .lista-menu{
+    display: flex;
+    justify-content: space-evenly; /*Espaçamento entre eles seja igual*/
+    width: 55%; /*Largura*/
+    align-items: center; /*Posicionando no centro*/
+  }
+  
+  /*Pegando os itens com tag a de dentro da nossa lista*/
+  .lista-menu li>a {
+    color: #FFF; /*Cor do texto*/
+    font-size: 20px; /*Tamanho da fonte*/
+    text-decoration: inherit; /*tirando o sublinhado*/
+    border: 2px solid;
+    border-radius: 10%;
+    padding: 5px;
+  }
+
+  .lista-menu li>a:hover {
+    color: #fff;
+    background: #260a30; 
+}
+  
+  .principal{
+    height: 140vh; /*Altura*/
+    display: flex;
+    background-color: #EAEAEA; /*Cor do fundo*/
+  }
+
+  #foto {
+    padding-bottom: 30px;
+  }
+
+  #nome-profissao {
+    padding-bottom: 10px;
+    padding-top: 0px;
+    margin-bottom: 50px;
+  }
+
+  .principal img {
+    width: 480px;
+    mix-blend-mode: multiply;
+    padding-top: 100px;
+    overflow: hidden;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    
+  }
+
+  .principal:hover img {      
+    -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+   }
+  
+  
+  /* O container é um componente do Bootstrap que garante que o seu layout vai ficar alinhado corretamente na página.
+  Ele pode definir as margens laterais da página, ou deixar sem margens e, também, posiciona o conteúdo no
+  centro do browser. O container é invisível. */
+  .container {
+    margin-right: auto; /*uma margem automática para todos os lados  */
+    margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: 40px; /*Margem para cima*/
+    max-width: 960px; /*largura maxima*/
+    padding-right: 10px; /* Espaçamento direito*/
+    padding-left: 10px; /*Espaçamento esquerdo*/
+    width: 100%; /*largura*/
+    
+  }
+  
+  .subcontainer-principal{
+    /*display, flex-direction e justify content são elementos do flexbox que em conjunto, alinham nossos itens*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 70px;
+   
+  }
+  
+  .nome-completo {
+    font-size: 36px;
+    color: #910e5f;
+    font-weight: 700; /*espessura*/
+    height: 70px;
+    padding-bottom: 20px;
+  }
+  
+  .profissao{
+    color: #976fbb;
+    height: 80PX;
+  }
+  
+  .texto-sobre {
+    font-size: 20px;
+    line-height: 32px; /*Espaçamento entre as linhas*/
+  }
+  
+  .article-lista{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  
+  .topico-principal {
+    font-size: 36px;
+    color: #e1008b;
+  }
+  
+  .lista-item{
+    padding: 32px;
+  }
+  
+  .lista-item ul li {
+    margin-bottom: 32px;  /*espaçamento entre os items da nossa lista*/
+  }
+  
+  .lista-titulo{
+   margin-bottom: 5px; 
+   font-size: 22px;
+   color: #661e4b;
+   font-weight: 700;
+  }
+  
+  .lista-local{
+    font-size: 18px;
+    color: #2F80ED;
+    
+  }
+  
+  .lista-descricao {
+    font-size: 20px;
+    margin-top: 5px;
+    line-height: 25px; /*Espaçamento entre as linhas*/
+    color: #828282;
+    font-weight: 300;
+  }
+  
+  .rodape{
+    background-color: #724796;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    padding-top: 0px;
+  }
+
+  .contact {
+    text-align: center;
+    color: #ebb2f5;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 150%;
+
+  }
+  
+  .lista-rodape li{
+    color: #FFF;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .lista-rodape li>a:link {
+    color: #641694;
+  }
+  
+  .estilo-icone{
+   font-size: 32px;
+   margin-right: 10px;
+  }
